@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alfa & Omega - Constructora</title>
+    <!-- Estilos CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #D4AF37;
+            --color-text: #ffffff;
+        }
+        
+        body {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--color-primary) !important;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+        
+        .navbar-brand {
+            color: var(--color-secondary) !important;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: var(--color-text) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--color-secondary) !important;
+            transform: translateY(-2px);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+        
+        .bg-dark-custom {
+            background-color: var(--color-primary) !important;
+            border-bottom: 1px solid var(--color-secondary);
+        }
+        
+        .btn-outline-success {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-success:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        
+        .image-text-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .overlay-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+        
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+            color: white;
+        }
+        
+        .image-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 1rem;
+        }
+        
+        .image-subtitle {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--color-secondary) !important;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .expandable-content {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            border-top: 2px solid var(--color-secondary);
+        }
+        
+        .footer-link-list a {
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link-list a:hover {
+            color: var(--color-secondary) !important;
+            padding-left: 5px;
+            text-decoration: none;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--color-secondary) !important;
+            color: var(--color-primary) !important;
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .image-title {
+                font-size: 2rem;
+            }
+            
+            .image-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .overlay-image {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Main Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Alfa & Omega</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="main_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Acerca.html">Acerca</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" href="Contactos.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <div class="image-text-container">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+             alt="Imagen de construcción" class="overlay-image">
+        
+        <div class="overlay-text">
+            <h1 class="image-title">ALFA & OMEGA</h1>
+            <p class="image-subtitle">Construyendo el futuro con excelencia</p>
+        </div>
+    </div>
+
+    <!-- Carrusel Automático -->
+    <div id="autoCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <!-- Primer Slide -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5 bg-dark rounded-3">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid border border-warning" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Diseño arquitectónico">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1"><b>Alfa</b> & Omega</h1>
+                                <h3 class="h2">Constructora</h3>
+                                <p>
+                                    Proyectos que combinan innovación y funcionalidad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo Slide -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5 bg-dark rounded-3">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid border border-warning" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Residencial">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Residencias <b>Exclusivas</b></h1>
+                                <h3 class="h2">Inmobiliaria</h3>
+                                <p>
+                                    Materiales premium y técnicas innovadoras.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercer Slide -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5 bg-dark rounded-3">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid border border-warning" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Obra civil">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Expertos en <b>Obra Civil</b></h1>
+                                <h3 class="h2">Precisión y Profesionalismo</h3>
+                                <p>
+                                    20+ años de experiencia en proyectos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categorías -->
+    <section class="container py-5 bg-dark text-white">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Nuestros Proyectos</h1>
+                <p>
+                    Explora nuestras categorías principales de construcción
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3 text-center">
+                <a href="#" class="category-filter" data-category="casas">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" 
+                         class="rounded-circle img-fluid border border-warning" 
+                         alt="Casas">
+                    <h5 class="mt-3 mb-3 text-warning">Casas</h5>
+                </a>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3 text-center">
+                <a href="#" class="category-filter" data-category="apartamentos">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" 
+                         class="rounded-circle img-fluid border border-warning" 
+                         alt="Apartamentos">
+                    <h5 class="mt-3 mb-3 text-warning">Apartamentos</h5>
+                </a>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3 text-center">
+                <a href="#" class="category-filter" data-category="proyectos">
+                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" 
+                         class="rounded-circle img-fluid border border-warning" 
+                         alt="Proyectos">
+                    <h5 class="mt-3 mb-3 text-warning">Proyectos Comerciales</h5>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Proyectos -->
+<section class="bg-black py-5">
+    <div class="container">
+        <h2 id="current-category" class="text-center text-warning mb-5">Todos los proyectos</h2>
+        
+        <div class="row" id="projects-container">
+            <!-- Proyecto Casa -->
+            <div class="col-md-4 mb-4 project-card" data-category="casas">
+                <div class="card h-100 bg-dark text-white border-warning">
+                    <img src="https://i.postimg.cc/JhBRqw4p/Whats-App-Image-2025-07-07-at-12-43-40-PM.jpg" 
+                         class="card-img-top img-fluid" 
+                         alt="Hermoso apto en soacha ciudad verde"
+                         style="height: 225px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="h4 text-warning">Hermoso apto en soacha ciudad verde </h3>
+                        <p class="text-light">Excelente ubicación, conjunto cerrado, vigilancia 24/7, vías de acceso, salón comunal.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning text-dark">Apartamento</span>
+                            <span class="text-light">$ 150 millones</span>
+                        </div>
+                        <button class="btn btn-sm btn-outline-warning mt-3 expand-btn" 
+                                data-project="casa1">
+                            Ver detalles <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Contenido expandido -->
+                    <div class="expandable-content d-none" id="casa1-details">
+                        <div class="p-3 border-top border-warning">
+                            <h4 class="text-warning">Detalles del proyecto</h4>
+                            <ul class="text-light">
+                                <li>4To piso</li>
+                                <li>3 habitaciones, 2 baños</li>
+                                <li>Cocina, sala comedor</li>
+                                <li>Parqueadero para visitantes</li>
+                                <li>Full remodelado</li>
+                            </ul>
+                            
+                            <div class="mt-3">
+                                <h5 class="text-warning mb-3">Galería</h5>
+                                <!-- Primera fila de imágenes -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/sDVDR0w2/Whats-App-Image-2025-07-07-at-12-43-40-PM-1.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Fachada principal"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/BQMZZcVB/Whats-App-Image-2025-07-07-at-12-43-40-PM-2.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Pasillo"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <!-- Segunda fila de imágenes -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/bw5zkY8G/Whats-App-Image-2025-07-07-at-12-43-40-PM-3.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Sala"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/Z5nbWvkt/Whats-App-Image-2025-07-07-at-12-43-40-PM-4.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Cocina"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/mDfBpdPB/Whats-App-Image-2025-07-07-at-12-43-41-PM.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Entrada"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <!-- Tercera fila de imágenes -->
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/jqhtv4tY/Whats-App-Image-2025-07-07-at-12-43-42-PM.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Área social"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/FRymMjSc/Whats-App-Image-2025-07-07-at-12-43-42-PM-1.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Baño"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="https://i.postimg.cc/BbN364Mn/Whats-App-Image-2025-07-07-at-12-43-42-PM-2.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Pasillo"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <!-- Cuarta fila de imágenes -->
+                                <div class="row g-2 mt-2">
+                                    <div class="col-6">
+                                        <img src="https://i.postimg.cc/hvKgcf8Y/Whats-App-Image-2025-07-07-at-12-43-42-PM-3.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Cuarto"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="https://i.postimg.cc/JhBRqw4p/Whats-App-Image-2025-07-07-at-12-43-40-PM.jpg" 
+                                             class="img-fluid rounded gallery-img border border-warning" 
+                                             alt="Entrada principal"
+                                             style="height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-warning w-100 mt-3 contact-btn">
+                                <i class="fas fa-envelope me-2"></i>Solicitar información
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          
+</section>
+<!-- Nuevo Proyecto - Apartamento en Soacha -->
+<div class="col-lg-4 col-md-6 mb-5 project-card" data-category="apartamentos">
+  <div class="card h-100 bg-dark text-white border-warning shadow-lg">
+    <!-- Imagen Principal -->
+    <div class="card-img-container position-relative">
+      <img src="https://i.postimg.cc/6QxmDFfj/Whats-App-Image-2025-07-07-at-12-44-13-PM-4.jpg" 
+           class="card-img-top img-fluid" 
+           alt="Vista panorámica del apartamento en Soacha"
+           style="height: 250px; object-fit: cover;">
+      <div class="price-badge bg-warning text-dark px-3 py-2 rounded-pill position-absolute top-0 end-0 m-3">
+        $150M
+      </div>
+    </div>
+
+    <!-- Card Body -->
+    <div class="card-body d-flex flex-column">
+      <div class="mb-3">
+        <h3 class="h4 text-warning mb-2">Moderno Apartamento en Ciudad Verde</h3>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="badge bg-warning text-dark">3 Habitaciones</span>
+          <span class="badge bg-warning text-dark">2 Baños</span>
+          <span class="badge bg-warning text-dark">72 m²</span>
+        </div>
+        <p class="card-text text-light">Excelente apartamento completamente remodelado en conjunto cerrado con vigilancia 24/7, áreas sociales y parqueaderos.</p>
+      </div>
+
+      <div class="mt-auto">
+        <button class="btn btn-outline-warning w-100 expand-btn" 
+                data-project="apto-soacha">
+          <i class="fas fa-expand me-2"></i>Ver Galería Completa
+        </button>
+      </div>
+    </div>
+
+    <!-- Contenido Expandible -->
+    <div class="expandable-content d-none" id="apto-soacha-details">
+      <div class="p-4 border-top border-warning">
+        <!-- Detalles Técnicos -->
+        <div class="mb-4">
+          <h4 class="text-warning mb-3">Características</h4>
+          <div class="row text-light">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-layer-group text-warning me-2"></i> 4to piso con ascensor</li>
+                <li class="mb-2"><i class="fas fa-bed text-warning me-2"></i> 3 habitaciones con closets</li>
+                <li class="mb-2"><i class="fas fa-bath text-warning me-2"></i> 2 baños completos</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-utensils text-warning me-2"></i> Cocina integral</li>
+                <li class="mb-2"><i class="fas fa-car text-warning me-2"></i> Parqueadero cubierto</li>
+                <li class="mb-2"><i class="fas fa-shield-alt text-warning me-2"></i> Seguridad 24/7</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galería de Imágenes -->
+        <div class="gallery-section">
+          <h4 class="text-warning mb-4">Galería del Proyecto</h4>
+          
+          <!-- Fila 1 -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/L4vFj43H/Whats-App-Image-2025-07-07-at-12-44-10-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Fachada del conjunto residencial"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/vBMC6C1g/Whats-App-Image-2025-07-07-at-12-44-11-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Sala de estar amplia"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/jd50cVMy/Whats-App-Image-2025-07-07-at-12-44-11-PM-1.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Cocina moderna"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+          
+          <!-- Fila 2 -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/RVDrbPYy/Whats-App-Image-2025-07-07-at-12-44-11-PM-2.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Habitación principal"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/x1NrrvDC/Whats-App-Image-2025-07-07-at-12-44-11-PM-3.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Baño moderno"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/mgvvTPBS/Whats-App-Image-2025-07-07-at-12-44-11-PM-4.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Pasillo de acceso"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+          
+          <!-- Fila 3 -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/cJfVCdJG/Whats-App-Image-2025-07-07-at-12-44-11-PM-5.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Terraza privada"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/DfxR8j70/Whats-App-Image-2025-07-07-at-12-44-12-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Comedor integrado"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/630gVzRH/Whats-App-Image-2025-07-07-at-12-44-12-PM-1.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Vista desde balcón"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+          
+          <!-- Fila 4 -->
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/nrh537Gn/Whats-App-Image-2025-07-07-at-12-44-12-PM-2.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Zona de lavandería"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/KjpWwz0B/Whats-App-Image-2025-07-07-at-12-44-12-PM-3.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Área verde del conjunto"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/cJ7bZTDs/Whats-App-Image-2025-07-07-at-12-44-13-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Parqueadero visitantes"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de Contacto -->
+        <div class="d-grid mt-4">
+          <button class="btn btn-warning btn-lg py-3 contact-btn">
+            <i class="fas fa-phone-alt me-2"></i> Contactar al Asesor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Proyecto de Construcción - Nuevo Desarrollo -->
+<div class="col-lg-4 col-md-6 mb-5 project-card" data-category="construccion">
+  <div class="card h-100 bg-dark text-white border-warning shadow-lg">
+    <!-- Imagen Principal -->
+    <div class="card-img-container position-relative">
+      <img src="https://i.postimg.cc/ZKFB8dDW/Whats-App-Image-2025-07-01-at-12-13-00-PM-2.jpg" 
+           class="card-img-top img-fluid" 
+           alt="Vista panorámica del proyecto en construcción"
+           style="height: 250px; object-fit: cover;">
+      <div class="price-badge bg-warning text-dark px-3 py-2 rounded-pill position-absolute top-0 end-0 m-3">
+        Proyecto Nuevo
+      </div>
+    </div>
+
+    <!-- Card Body -->
+    <div class="card-body d-flex flex-column">
+      <div class="mb-3">
+        <h3 class="h4 text-warning mb-2">Moderno Proyecto Residencial</h3>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="badge bg-warning text-dark">En Construcción</span>
+          <span class="badge bg-warning text-dark">12 Apartamentos</span>
+          <span class="badge bg-warning text-dark">Áreas Sociales</span>
+        </div>
+        <p class="card-text text-light">Exclusivo proyecto en desarrollo con acabados de lujo, ubicación privilegiada y diseño arquitectónico moderno.</p>
+      </div>
+
+      <div class="mt-auto">
+        <button class="btn btn-outline-warning w-100 expand-btn" 
+                data-project="proyecto-construccion">
+          <i class="fas fa-expand me-2"></i>Ver Avances de Obra
+        </button>
+      </div>
+    </div>
+
+    <!-- Contenido Expandible -->
+    <div class="expandable-content d-none" id="proyecto-construccion-details">
+      <div class="p-4 border-top border-warning">
+        <!-- Detalles Técnicos -->
+        <div class="mb-4">
+          <h4 class="text-warning mb-3">Especificaciones del Proyecto</h4>
+          <div class="row text-light">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-building text-warning me-2"></i> 4 pisos</li>
+                <li class="mb-2"><i class="fas fa-home text-warning me-2"></i> 12 apartamentos</li>
+                <li class="mb-2"><i class="fas fa-calendar-alt text-warning me-2"></i> Entrega Q4 2025</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-chess-rook text-warning me-2"></i> Zona de BBQ</li>
+                <li class="mb-2"><i class="fas fa-swimming-pool text-warning me-2"></i> Piscina</li>
+                <li class="mb-2"><i class="fas fa-shield-alt text-warning me-2"></i> Seguridad 24/7</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galería de Imágenes -->
+        <div class="gallery-section">
+          <h4 class="text-warning mb-4">Avances de Construcción</h4>
+          
+          <!-- Fila 1 -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/fLtSmq6s/Whats-App-Image-2025-07-01-at-12-12-58-PM-1.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Estructura principal en construcción"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/BQGPPgNW/Whats-App-Image-2025-07-01-at-12-12-59-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Trabajos en cimentación"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/kGWVh6Jh/Whats-App-Image-2025-07-01-at-12-12-59-PM-2.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Vista aérea del terreno"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+          
+          <!-- Fila 2 -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/sXkQc9rh/Whats-App-Image-2025-07-01-at-12-12-59-PM-3.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Instalaciones eléctricas"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/JzryPz9P/Whats-App-Image-2025-07-01-at-12-13-00-PM.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Trabajos en fachada"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/66ZGQSrL/Whats-App-Image-2025-07-01-at-12-13-00-PM-1.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Vista interior de apartamento"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+          
+          <!-- Fila 3 (solo una imagen) -->
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img src="https://i.postimg.cc/ZKFB8dDW/Whats-App-Image-2025-07-01-at-12-13-00-PM-2.jpg"
+                   class="img-fluid rounded-3 gallery-img h-100"
+                   alt="Maqueta del proyecto terminado"
+                   style="min-height: 180px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de Contacto -->
+        <div class="d-grid mt-4">
+          <button class="btn btn-warning btn-lg py-3 contact-btn">
+            <i class="fas fa-file-signature me-2"></i> Reservar Ahora
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <!-- Proyecto Comercial -->
+                <div class="col-md-4 mb-4 project-card" data-category="proyectos">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450&q=80" 
+                             class="card-img-top img-fluid" 
+                             alt="Edificio comercial"
+                             style="height: 225px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning">Centro Empresarial</h3>
+                            <p>Complejo de oficinas clase A con tecnología de punta.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning text-dark">Comercial</span>
+                                <span>Desde $350,000</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-warning mt-3 expand-btn" 
+                                    data-project="comercial1">
+                                Ver detalles <i class="fas fa-chevron-down ms-2"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Contenido expandido -->
+                        <div class="expandable-content d-none" id="comercial1-details">
+                            <div class="p-3 border-top border-warning">
+                                <h4 class="text-warning">Detalles del proyecto</h4>
+                                <ul>
+                                    <li>Área construida: 5,000m²</li>
+                                    <li>12 niveles</li>
+                                    <li>Sistema inteligente de climatización</li>
+                                    <li>Estacionamiento subterráneo</li>
+                                    <li>Zonas comunes premium</li>
+                                </ul>
+                                
+                                <button class="btn btn-sm btn-warning mt-3 contact-btn w-100">
+                                    <i class="fas fa-envelope me-2"></i>Contactar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-warning" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark pt-5" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-warning border-bottom pb-3 border-light">Alfa & Omega</h2>
+                    <ul class="list-unstyled footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw me-2"></i>
+                            Carrera 81G 45A-30 Bogota
+Distrito Capital, Colombia
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw me-2"></i>
+                            <a class="text-decoration-none" href="tel:311-554-1520">311-554-1520</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw me-2"></i>
+                            <a class="text-decoration-none" href="mailto:comadrejaprim@gmail.com">comadrejaprim@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Servicios</h2>
+                    <ul class="list-unstyled footer-link-list">
+                        <li><a class="text-decoration-none" href="Servicios.html#construccion">Construcción Residencial</a></li>
+                        <li><a class="text-decoration-none" href="Servicios.html#comercial">Construcción Comercial</a></li>
+                        <li><a class="text-decoration-none" href="Servicios.html#remodelacion">Remodelaciones</a></li>
+                        <li><a class="text-decoration-none" href="Servicios.html#diseno">Diseño Arquitectónico</a></li>
+                        <li><a class="text-decoration-none" href="Servicios.html#supervision">Supervisión de Obras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Enlaces</h2>
+                    <ul class="list-unstyled footer-link-list">
+                        <li><a class="text-decoration-none" href="Inicio.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" href="Acerca.html">Acerca de Nosotros</a></li>
+                        <li><a class="text-decoration-none" href="Proyectos.html">Proyectos</a></li>
+                        <li><a class="text-decoration-none" href="Servicios.html">Servicios</a></li>
+                        <li><a class="text-decoration-none" href="Contactos.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left">
+                        <li class="list-inline-item">
+                            <a class="social-icon text-light rounded-circle" target="_blank" href="http://facebook.com/">
+                                <i class="fab fa-facebook-f fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-icon text-light rounded-circle" target="_blank" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-icon text-light rounded-circle" target="_blank" href="https://twitter.com/">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-icon text-light rounded-circle" target="_blank" href="https://www.linkedin.com/">
+                                <i class="fab fa-linkedin-in fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Suscríbete</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Tu correo">
+                        <button class="btn btn-outline-warning text-light">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2023 Alfa & Omega Constructora | Todos los derechos reservados
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Expandir/contraer tarjetas
+            document.querySelectorAll('.expand-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    const content = document.getElementById(`${projectId}-details`);
+                    
+                    content.classList.toggle('d-none');
+                    
+                    if(content.classList.contains('d-none')) {
+                        this.innerHTML = 'Ver detalles <i class="fas fa-chevron-down ms-2"></i>';
+                    } else {
+                        this.innerHTML = 'Ocultar detalles <i class="fas fa-chevron-up ms-2"></i>';
+                    }
+                });
+            });
+            
+            // Galería modal
+            document.querySelectorAll('.gallery-img').forEach(img => {
+                img.addEventListener('click', function() {
+                    document.getElementById('modalImage').src = this.src;
+                    document.getElementById('modalTitle').textContent = this.alt;
+                    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                    modal.show();
+                });
+            });
+            
+            // Filtrado por categorías
+            document.querySelectorAll('.category-filter').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.getAttribute('data-category');
+                    document.getElementById('current-category').textContent = 
+                        category === 'casas' ? 'Proyectos de Casas' :
+                        category === 'apartamentos' ? 'Proyectos de Apartamentos' : 
+                        'Proyectos Comerciales';
+                        
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        card.style.display = (category === 'all' || card.getAttribute('data-category') === category) 
+                            ? 'block' 
+                            : 'none';
+                    });
+                });
+            });
+            
+            // Botones de contacto
+            document.querySelectorAll('.contact-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    window.location.href = 'Contactos.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
