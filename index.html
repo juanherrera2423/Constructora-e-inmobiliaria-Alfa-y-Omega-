@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alfa & Omega - Constructora</title>
+    <!-- Estilos CSS -->
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #D4AF37;
+            --color-text: #ffffff;
+        }
+        
+        body {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--color-primary) !important;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+        
+        .navbar-brand {
+            color: var(--color-secondary) !important;
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link {
+            color: var(--color-text) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-secondary) !important;
+            transform: translateY(-2px);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-secondary);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-card {
+            background-color: #111111;
+            border: 1px solid var(--color-secondary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-gold {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            font-weight: 500;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            background-color: #c9a227;
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-gold {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-secondary);
+        }
+        
+        .contact-info {
+            background-color: #111111;
+            padding: 2rem;
+            border-radius: 5px;
+            border: 1px solid var(--color-secondary);
+        }
+        
+        .contact-icon {
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        footer {
+            border-top: 2px solid var(--color-secondary);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--color-secondary);
+            color: var(--color-text);
+            transition: all 0.3s ease;
+            margin-right: 0.5rem;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Alfa & Omega</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contactos.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center py-5">
+            <h1 class="display-4 mb-4">Construyendo Sueños, Creando Hogares</h1>
+            <p class="lead">No solo construimos propiedades, te asesoramos para la mejor compra o venta</p>
+        </div>
+    </section>
+
+<!-- Carrusel Automático -->
+<div id="autoCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner rounded-3 overflow-hidden">
+        <!-- Primer Slide -->
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row p-4 p-lg-5 bg-dark-custom align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="display-4 text-gold"><b>Alfa</b> & Omega</h1>
+                        <h3 class="h2">Constructora</h3>
+                        <p class="lead">
+                            Proyectos que combinan innovación y funcionalidad.
+                        </p>
+                        <a href="Proyectos.html" class="btn btn-outline-gold mt-2">Ver proyectos</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded border border-gold shadow-lg" 
+                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Diseño arquitectónico"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo Slide -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row p-4 p-lg-5 bg-dark-custom align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="display-4 text-gold">Residencias <b>Exclusivas</b></h1>
+                        <h3 class="h2">Inmobiliaria</h3>
+                        <p class="lead">
+                            Materiales premium y técnicas innovadoras.
+                        </p>
+                        <a href="Proyectos.html" class="btn btn-outline-gold mt-2">Ver residencias</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded border border-gold shadow-lg" 
+                             src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Residencial"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer Slide -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row p-4 p-lg-5 bg-dark-custom align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="display-4 text-gold">Expertos en <b>Obra Civil</b></h1>
+                        <h3 class="h2">Precisión y Profesionalismo</h3>
+                        <p class="lead">
+                            20+ años de experiencia en proyectos.
+                        </p>
+                        <a href="Servicios.html" class="btn btn-outline-gold mt-2">Nuestros servicios</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded border border-gold shadow-lg" 
+                             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Obra civil"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controles del carrusel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#autoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#autoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+ <style>
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #D4AF37;
+            --color-text: #ffffff;
+        }
+        
+        body {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            font-family: 'Roboto', sans-serif;
+            padding-top: 20px;
+        }
+        
+        .bg-dark-custom {
+            background-color: #0a0a0a !important;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--color-secondary);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-secondary);
+        }
+        
+        .card-custom {
+            background-color: #111111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            height: 100%;
+            color: var(--color-text);
+            overflow: hidden;
+        }
+        
+        .card-custom:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-secondary);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .border-gold {
+            border-color: var(--color-secondary) !important;
+        }
+        
+        .text-gold {
+            color: var(--color-secondary) !important;
+        }
+        
+        .category-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+        
+        .category-filter:hover .category-img {
+            border-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+        
+        .category-filter {
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .category-filter:hover {
+            text-decoration: none;
+        }
+        
+        .lead {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        
+        .card-text {
+            color: #aaa;
+        }
+        
+        /* Efecto de brillo al pasar el mouse */
+        .img-hover-effect {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .img-hover-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(212, 175, 55, 0.1);
+            transform: rotate(30deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .img-hover-effect:hover::after {
+            opacity: 1;
+            animation: shine 1.5s forwards;
+        }
+        
+        @keyframes shine {
+            0% {
+                left: -50%;
+                top: -50%;
+            }
+            100% {
+                left: 100%;
+                top: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Categorías -->
+<section class="container py-5 bg-dark-custom">
+    <div class="row text-center pt-3">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="section-title">Nuestro catalogo</h2>
+            <p class="lead">
+                Explora nuestras categorías principales de construcción con diseños exclusivos y calidad superior
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 p-4 text-center">
+            <a href="#" class="category-filter text-decoration-none" data-category="casas">
+                <div class="card card-custom h-100 border-0">
+                    <div class="card-body">
+                        <div class="img-hover-effect">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80" 
+                                 class="category-img rounded-circle mb-3" 
+                                 alt="Casas de lujo"
+                                 loading="lazy">
+                        </div>
+                        <h5 class="text-gold">Casas </h5>
+                        <p class="card-text">Viviendas unifamiliares o comerciales </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 p-4 text-center">
+            <a href="#" class="category-filter text-decoration-none" data-category="apartamentos">
+                <div class="card card-custom h-100 border-0">
+                    <div class="card-body">
+                        <div class="img-hover-effect">
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80" 
+                                 class="category-img rounded-circle mb-3" 
+                                 alt="Apartamentos premium"
+                                 loading="lazy">
+                        </div>
+                        <h5 class="text-gold">Apartamentos </h5>
+                        <p class="card-text">hermosos espacios para vivir en familia</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 p-4 text-center">
+            <a href="#" class="category-filter text-decoration-none" data-category="proyectos">
+                <div class="card card-custom h-100 border-0">
+                    <div class="card-body">
+                        <div class="img-hover-effect">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80" 
+                                 class="category-img rounded-circle mb-3" 
+                                 alt="Proyectos comerciales"
+                                 loading="lazy">
+                        </div>
+                        <h5 class="text-gold">Proyectos </h5>
+                        <p class="card-text">inicia una nueva etapa</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    
+</section>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Efecto de filtrado para las categorías (puedes implementar la funcionalidad que necesites)
+    document.querySelectorAll('.category-filter').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.getAttribute('data-category');
+            
+            // Aquí puedes implementar la lógica para filtrar proyectos
+            alert(`Mostrando proyectos de la categoría: ${category}`);
+            
+            // Ejemplo: Scroll a la sección de proyectos
+            // document.getElementById('proyectos-section').scrollIntoView({behavior: 'smooth'});
+        });
+    });
+</script>
+
+
+
+<html lang="es">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-black {
+            background-color: #000 !important;
+        }
+        .text-gold {
+            color: #D4AF37 !important;
+        }
+        .bg-gold {
+            background-color: #D4AF37 !important;
+        }
+        .btn-outline-gold {
+            color: #D4AF37;
+            border-color: #D4AF37;
+        }
+        .btn-outline-gold:hover {
+            color: #000;
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+        .btn-gold {
+            color: #000;
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+        .btn-gold:hover {
+            color: #000;
+            background-color: #c19b2e;
+            border-color: #c19b2e;
+        }
+        .border-gold {
+            border-color: #D4AF37 !important;
+        }
+        .card-custom {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #D4AF37;
+        }
+        .category-filter {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .category-filter.active {
+            color: #D4AF37 !important;
+            border-bottom: 2px solid #D4AF37;
+        }
+        .gallery-img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        .price-badge {
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+
+<body class="bg-black text-white">
+    <!-- Filtros de categoría -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="#" class="category-filter text-white text-decoration-none px-3 py-2 active" data-category="all">Todos</a>
+                <a href="#" class="category-filter text-white text-decoration-none px-3 py-2" data-category="casas">Casas</a>
+                <a href="#" class="category-filter text-white text-decoration-none px-3 py-2" data-category="apartamentos">Apartamentos</a>
+                <a href="#" class="category-filter text-white text-decoration-none px-3 py-2" data-category="proyectos">Comercial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Proyectos -->
+<section class="bg-black py-5">
+    <div class="container">
+        <h2 id="current-category" class="section-title text-center mb-5">Todas las propiedades</h2>
+        
+        <div class="row g-4" id="projects-container">
+
+<html lang="es">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos - Desplegables Funcionales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-gold {
+            background-color: #D4AF37 !important;
+        }
+        .text-gold {
+            color: #D4AF37 !important;
+        }
+        .btn-gold {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+        .btn-gold:hover {
+            background-color: #B8941F;
+            border-color: #B8941F;
+            color: #000;
+        }
+        .btn-outline-gold {
+            color: #D4AF37;
+            border-color: #D4AF37;
+        }
+        .btn-outline-gold:hover {
+            background-color: #D4AF37;
+            color: #000;
+        }
+        .border-gold {
+            border-color: #D4AF37 !important;
+        }
+        .card-custom {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        .price-badge {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .gallery-img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        .project-details {
+            transition: all 0.3s ease;
+        }
+    </style>
+
+<body class="bg-black text-white">
+
+            
+           <!-- Galería de Proyectos -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Todas las propiedades</h2>
+            
+            <div class="row g-4">
+                
+                <!-- ========== PROYECTO 1 ========== -->
+                <div class="col-lg-4 col-md-6 project-card" data-category="apartamentos">
+                    <div class="card card-custom h-100">
+                        <div class="position-relative">
+                            <img src="https://i.postimg.cc/JhBRqw4p/Whats-App-Image-2025-07-07-at-12-43-40-PM.jpg" 
+                                 class="card-img-top" 
+                                 alt="Apartamento Ciudad Verde"
+                                 style="height: 250px; object-fit: cover;">
+                            <div class="bg-gold text-dark px-3 py-2 rounded-pill position-absolute top-0 end-0 m-3 fw-bold">
+                                $150M
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title text-gold">Hermoso Apto en Soacha Ciudad Verde</h5>
+                            <p class="card-text text-white-50">Excelente ubicación, conjunto cerrado, vigilancia 24/7.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-gold text-dark">3 Hab</span>
+                                    <span class="badge bg-gold text-dark">2 Baños</span>
+                                    <span class="badge bg-gold text-dark">85 m²</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-gold toggle-details" onclick="toggleDetails('details1', this)">
+                                    Ver más <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- DESPLEGABLE 1 -->
+                            <div id="details1" class="project-details">
+                                <div class="border-top border-gold pt-3 mt-3">
+                                    <h6 class="text-gold mb-3">
+                                        <i class="fas fa-list-ul me-2"></i>Características
+                                    </h6>
+                                    
+                                    <div class="row text-white-50 small">
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ 4to piso con ascensor</li>
+                                                <li class="mb-2">✓ 3 habitaciones</li>
+                                                <li class="mb-2">✓ 2 baños completos</li>
+                                                <li class="mb-2">✓ 85 m² construidos</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ Cocina integral</li>
+                                                <li class="mb-2">✓ Parqueadero</li>
+                                                <li class="mb-2">✓ Seguridad 24/7</li>
+                                                <li class="mb-2">✓ Entrega inmediata</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <h6 class="text-gold mt-4 mb-3">
+                                        <i class="fas fa-images me-2"></i>Galería
+                                    </h6>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/sDVDR0w2/Whats-App-Image-2025-07-07-at-12-43-40-PM-1.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/BQMZZcVB/Whats-App-Image-2025-07-07-at-12-43-40-PM-2.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/bw5zkY8G/Whats-App-Image-2025-07-07-at-12-43-40-PM-3.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-gold btn-sm">
+                                            <i class="fas fa-info-circle me-2"></i>Más información
+                                        </button>
+                                        <button class="btn btn-outline-gold btn-sm">
+                                            <i class="fas fa-phone me-2"></i>Contactar asesor
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ========== PROYECTO 2 ========== -->
+                <div class="col-lg-4 col-md-6 project-card" data-category="apartamentos">
+                    <div class="card card-custom h-100">
+                        <div class="position-relative">
+                            <img src="https://i.postimg.cc/6QxmDFfj/Whats-App-Image-2025-07-07-at-12-44-13-PM-4.jpg" 
+                                 class="card-img-top" 
+                                 alt="Apartamento Moderno"
+                                 style="height: 250px; object-fit: cover;">
+                            <div class="bg-gold text-dark px-3 py-2 rounded-pill position-absolute top-0 end-0 m-3 fw-bold">
+                                $180M
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title text-gold">Moderno Apartamento Ciudad Verde</h5>
+                            <p class="card-text text-white-50">Completamente remodelado, acabados de lujo.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-gold text-dark">3 Hab</span>
+                                    <span class="badge bg-gold text-dark">2 Baños</span>
+                                    <span class="badge bg-gold text-dark">72 m²</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-gold toggle-details" onclick="toggleDetails('details2', this)">
+                                    Ver más <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- DESPLEGABLE 2 -->
+                            <div id="details2" class="project-details">
+                                <div class="border-top border-gold pt-3 mt-3">
+                                    <h6 class="text-gold mb-3">
+                                        <i class="fas fa-list-ul me-2"></i>Características
+                                    </h6>
+                                    
+                                    <div class="row text-white-50 small">
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ 72 m² totales</li>
+                                                <li class="mb-2">✓ 3 habitaciones</li>
+                                                <li class="mb-2">✓ 2 baños modernos</li>
+                                                <li class="mb-2">✓ Piso 4 con ascensor</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ Cocina integral</li>
+                                                <li class="mb-2">✓ Closets empotrados</li>
+                                                <li class="mb-2">✓ Parqueadero</li>
+                                                <li class="mb-2">✓ Vigilancia 24/7</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <h6 class="text-gold mt-4 mb-3">
+                                        <i class="fas fa-images me-2"></i>Galería
+                                    </h6>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/L4vFj43H/Whats-App-Image-2025-07-07-at-12-44-10-PM.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/vBMC6C1g/Whats-App-Image-2025-07-07-at-12-44-11-PM.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="https://i.postimg.cc/jd50cVMy/Whats-App-Image-2025-07-07-at-12-44-11-PM-1.jpg" 
+                                                 class="img-fluid rounded border border-gold gallery-img" 
+                                                 style="height: 80px; object-fit: cover; width: 100%;">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-gold btn-sm">
+                                            <i class="fas fa-info-circle me-2"></i>Más información
+                                        </button>
+                                        <button class="btn btn-outline-gold btn-sm">
+                                            <i class="fas fa-phone me-2"></i>Contactar asesor
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ========== PROYECTO 3 ========== -->
+                <div class="col-lg-4 col-md-6 project-card" data-category="proyectos">
+                    <div class="card card-custom h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80" 
+                                 class="card-img-top" 
+                                 alt="Centro Comercial"
+                                 style="height: 250px; object-fit: cover;">
+                            <div class="bg-gold text-dark px-3 py-2 rounded-pill position-absolute top-0 end-0 m-3 fw-bold">
+                                $500M
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title text-gold">Centro Comercial Andino</h5>
+                            <p class="card-text text-white-50">Espacios comerciales de alta gama, ubicación premium.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-gold text-dark">Comercial</span>
+                                    <span class="badge bg-gold text-dark">120 locales</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-gold toggle-details" onclick="toggleDetails('details3', this)">
+                                    Ver más <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- DESPLEGABLE 3 -->
+                            <div id="details3" class="project-details">
+                                <div class="border-top border-gold pt-3 mt-3">
+                                    <h6 class="text-gold mb-3">
+                                        <i class="fas fa-list-ul me-2"></i>Características
+                                    </h6>
+                                    
+                                    <div class="row text-white-50 small">
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ 15,000 m² construidos</li>
+                                                <li class="mb-2">✓ 120 locales</li>
+                                                <li class="mb-2">✓ 4 niveles</li>
+                                                <li class="mb-2">✓ Zona premium</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">✓ 500 parqueaderos</li>
+                                                <li class="mb-2">✓ Zona de comidas</li>
+                                                <li class="mb-2">✓ Seguridad 24/7</li>
+                                                <li class="mb-2">✓ WiFi gratuito</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-grid gap-2 mt-4">
+                                        <button class="btn btn-gold btn-sm">
+                                            <i class="fas fa-info-circle me-2"></i>Más información
+                                        </button>
+                                        <button class="btn btn-outline-gold btn-sm">
+                                            <i class="fas fa-chart-line me-2"></i>Plan de inversión
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-gold" id="modalTitle">Imagen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-gold">
+        <div class="container text-center">
+            <h3 class="text-gold mb-3">ALFA & OMEGA</h3>
+            <p class="text-white-50">Constructora e Inmobiliaria - Más de 15 años de experiencia</p>
+            <p class="text-white-50 small">© 2025 Alfa & Omega. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ========== FUNCIÓN PRINCIPAL PARA DESPLEGABLES ==========
+        function toggleDetails(detailsId, button) {
+            const details = document.getElementById(detailsId);
+            const icon = button.querySelector('i');
+            
+            if (details.classList.contains('show')) {
+                // Ocultar
+                details.classList.remove('show');
+                button.innerHTML = 'Ver más <i class="fas fa-chevron-down ms-1"></i>';
+            } else {
+                // Mostrar
+                details.classList.add('show');
+                button.innerHTML = 'Ver menos <i class="fas fa-chevron-up ms-1"></i>';
+            }
+        }
+        
+        // ========== FILTROS DE CATEGORÍA ==========
+        document.querySelectorAll('.category-filter').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Actualizar botón activo
+                document.querySelectorAll('.category-filter').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                // Filtrar tarjetas
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // ========== GALERÍA MODAL ==========
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('modalImage').src = this.src;
+                document.getElementById('modalTitle').textContent = this.alt || 'Imagen del proyecto';
+                new bootstrap.Modal(document.getElementById('imageModal')).show();
+            });
+        });
+        
+        console.log('✅ Sistema de desplegables inicializado correctamente');
+    </script>
+
+<!-- Footer -->
+<footer class="py-5 border-top border-gold">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="text-gold mb-4">ALFA & OMEGA</h3>
+                <p>Constructora e Inmobiliaria con más de 15 años de experiencia transformando espacios y creando hogares.</p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-gold mb-4">Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="Inicio.html" class="text-white">Inicio</a></li>
+                    <li class="mb-2"><a href="Acerca.html" class="text-white">Acerca</a></li>
+                    <li class="mb-2"><a href="Proyectos.html" class="text-white">Proyectos</a></li>
+                    <li class="mb-2"><a href="Servicios.html" class="text-white">Servicios</a></li>
+                    <li><a href="Contactos.html" class="text-white">Contactos</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-gold mb-4">Contacto</h5>
+                <ul class="list-unstyled text-white">
+                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-gold"></i> Bogotá, Colombia</li>
+                    <li class="mb-2"><i class="fas fa-phone me-2 text-gold"></i> +57 311 554 1520</li>
+                    <li class="mb-2"><i class="fas fa-envelope me-2 text-gold"></i> comadrejaprim@gmail.com</li>
+                    <li><i class="fas fa-clock me-2 text-gold"></i> Lunes-Domingo: 9am-7pm</li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3">
+                <!-- Espacio para el logo de la empresa -->
+                <div class="logo-section text-center">
+                    <div class="logo-placeholder mb-3" style="height: 120px; background: rgba(212, 175, 55, 0.1); border: 2px dashed var(--color-secondary); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                        <span class="text-gold">LOGO EMPRESA</span>
+                    </div>
+                    <p class="text-white small">Tu logo aparecerá aquí</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-4 border-gold">
+        
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small text-white-50 mb-0">&copy; 2023 Alfa & Omega. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="#" class="text-white-50 small me-3">Política de privacidad</a>
+                <a href="#" class="text-white-50 small">Términos y condiciones</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.padding = '0.5rem 0';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+        } else {
+            navbar.style.padding = '1rem 0';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Initialize carousel with auto-rotation
+    const myCarousel = document.querySelector('#projectsCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        wrap: true,
+        pause: 'hover'
+    });
+</script>
+
+    <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM cargado - inicializando funcionalidades');
+
+        // Expandir/contraer tarjetas
+        document.querySelectorAll('.expand-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const content = document.getElementById(`${projectId}-details`);
+                
+                if (content) {
+                    content.classList.toggle('d-none');
+                    
+                    if(content.classList.contains('d-none')) {
+                        this.innerHTML = 'Ver detalles <i class="fas fa-chevron-down ms-2"></i>';
+                    } else {
+                        this.innerHTML = 'Ocultar detalles <i class="fas fa-chevron-up ms-2"></i>';
+                    }
+                } else {
+                    console.error('No se encontró el elemento:', ${projectId}-details);
+                }
+            });
+        });
+        
+        // Galería modal
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('modalImage').src = this.src;
+                document.getElementById('modalTitle').textContent = this.alt;
+                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                modal.show();
+            });
+        });
+        
+        // Filtrado por categorías - CORREGIDO
+        document.querySelectorAll('.category-filter').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                
+                // Actualizar título
+                document.getElementById('current-category').textContent = 
+                    category === 'all' ? 'Todas las propiedades' :
+                    category === 'casas' ? 'Proyectos de Casas' :
+                    category === 'apartamentos' ? 'Proyectos de Apartamentos' : 
+                    'Proyectos Comerciales';
+                
+                // Filtrar proyectos - CORREGIDO (usando display de Bootstrap)
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Botones de contacto
+        document.querySelectorAll('.contact-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                window.location.href = 'Contactos.html';
+            });
+        });
+
+        // Verificar que los elementos existen
+        console.log('Botones expand-btn encontrados:', document.querySelectorAll('.expand-btn').length);
+        console.log('Elementos de detalles encontrados:', document.querySelectorAll('[id$="-details"]').length);
+    });
+</script>
+</body>
+</html>
