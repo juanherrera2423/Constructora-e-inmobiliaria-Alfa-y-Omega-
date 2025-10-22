@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alfa & Omega - Proyectos</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #D4AF37;
+            --color-text: #ffffff;
+        }
+        
+        body {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--color-primary) !important;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+        
+        .navbar-brand {
+            color: var(--color-secondary) !important;
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link {
+            color: var(--color-text) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-secondary) !important;
+            transform: translateY(-2px);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-secondary);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-card {
+            background-color: #111111;
+            border: 1px solid var(--color-secondary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-gold {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            font-weight: 500;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            background-color: #c9a227;
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-gold {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-secondary);
+        }
+        
+        .contact-info {
+            background-color: #111111;
+            padding: 2rem;
+            border-radius: 5px;
+            border: 1px solid var(--color-secondary);
+        }
+        
+        .contact-icon {
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        footer {
+            border-top: 2px solid var(--color-secondary);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--color-secondary);
+            color: var(--color-text);
+            transition: all 0.3s ease;
+            margin-right: 0.5rem;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Estilos para la galería de proyectos */
+        .bg-black {
+            background-color: #000 !important;
+        }
+        
+        .text-warning {
+            color: #ffc107 !important;
+        }
+        
+        .bg-warning {
+            background-color: #ffc107 !important;
+        }
+        
+        .btn-outline-warning {
+            color: #ffc107;
+            border-color: #ffc107;
+        }
+        
+        .btn-outline-warning:hover {
+            color: #000;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        
+        .border-warning {
+            border-color: #ffc107 !important;
+        }
+        
+        .card {
+            background-color: #111;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .nav-tabs .nav-link {
+            color: #fff;
+            background-color: #222;
+            border-color: #444;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: #000;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        
+        .progress {
+            background-color: #333;
+        }
+        
+        .modal-content {
+            background-color: #111;
+        }
+        
+        .carousel-caption p {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Estilos personalizados para proyectos */
+        .project-card-inner {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #D4AF37;
+        }
+        
+        .project-card-inner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .expandable-content.d-none {
+            max-height: 0 !important;
+        }
+        
+        .expandable-content:not(.d-none) {
+            max-height: 1500px; /* Valor suficientemente grande */
+        }
+        
+        .nav-tabs .nav-link {
+            color: #D4AF37;
+            border: none;
+            position: relative;
+        }
+        
+        .nav-tabs .nav-link:hover {
+            color: #f8d35b;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: #000;
+            background-color: #D4AF37;
+            border: none;
+            font-weight: bold;
+        }
+        
+        .nav-tabs .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s;
+        }
+        
+        .nav-tabs .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .nav-tabs .nav-link.active:after {
+            display: none;
+        }
+        
+        /* Estilos para el acordeón */
+        .accordion-button:not(.collapsed) {
+            color: #D4AF37;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: none;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: #D4AF37;
+        }
+        
+        /* Mejoras para móviles */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .nav-tabs .nav-item {
+                display: inline-block;
+                float: none;
+            }
+            
+            .project-card-inner {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="Inicio.html">Alfa & Omega</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contactos.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center py-5">
+            <h1 class="display-4 mb-4">De los Planos a la Realidad</h1>
+            <p class="lead">Transformando diseños en realidades y aspiraciones en patrimonios</p>
+        </div>
+    </section>
+
+    <!-- Galería de Proyectos - Estilo Alternativo -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Pestañas de navegación -->
+            <ul class="nav nav-tabs mb-4" id="projectTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Todos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="casas-tab" data-bs-toggle="tab" data-bs-target="#casas" type="button" role="tab" aria-controls="casas" aria-selected="false">Casas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="apartamentos-tab" data-bs-toggle="tab" data-bs-target="#apartamentos" type="button" role="tab" aria-controls="apartamentos" aria-selected="false">Apartamentos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="comercial-tab" data-bs-toggle="tab" data-bs-target="#comercial" type="button" role="tab" aria-controls="comercial" aria-selected="false">Comercial</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content py-4" id="projectTabsContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="projects-container">
+                        <!-- Proyecto de Edificio Residencial -->
+                        <div class="col project-card" data-category="edificios">
+                            <div class="card h-100 text-white border-warning project-card-inner">
+                                <div class="position-relative">
+                                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80" 
+                                         class="card-img-top" 
+                                         alt="Edificio residencial moderno"
+                                         style="height: 200px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 bg-warning text-dark p-2 m-2 rounded">
+                                        <i class="fas fa-home me-1"></i>Residencial
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h3 class="h5 text-warning mb-0">Edificio Horizonte</h3>
+                                        <span class="badge bg-warning text-dark">En construcción</span>
+                                    </div>
+                                    <p class="card-text">Moderno edificio residencial de 3 pisos con 3 apartamentos y terraza comunal.</p>
+                                    
+                                    <ul class="list-unstyled small mb-3">
+                                        <li class="mb-1"><i class="fas fa-ruler-combined text-warning me-2"></i> 4x12m (48m² por piso)</li>
+                                        <li class="mb-1"><i class="fas fa-building text-warning me-2"></i> 3 niveles + terraza</li>
+                                        <li class="mb-1"><i class="fas fa-door-open text-warning me-2"></i> 3 apartamentos</li>
+                                        <li><i class="fas fa-toilet text-warning me-2"></i> 4 baños totales</li>
+                                    </ul>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <span class="text-warning fw-bold">Desde $320,000</span>
+                                        <button class="btn btn-sm btn-outline-warning expand-btn" data-project="edificio1">
+                                            Más info <i class="fas fa-chevron-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Detalles expandidos -->
+                                <div class="expandable-content d-none" id="edificio1-details">
+                                    <div class="p-3 bg-black bg-opacity-50 border-top border-warning">
+                                        <h4 class="h5 text-warning mb-3">Detalles de Construcción</h4>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5 class="h6 text-warning">Distribución por niveles:</h5>
+                                                <ul class="small">
+                                                    <li class="mb-2"><strong>Planta Baja:</strong> Apartamento 1 (2 dormitorios, 1 baño)</li>
+                                                    <li class="mb-2"><strong>Primer Piso:</strong> Apartamento 2 (2 dormitorios, 1 baño)</li>
+                                                    <li class="mb-2"><strong>Segundo Piso:</strong> Apartamento 3 (1 dormitorio, 1 baño)</li>
+                                                    <li><strong>Terraza:</strong> Área comunal con baño completo</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="h6 text-warning">Especificaciones técnicas:</h5>
+                                                <ul class="small">
+                                                    <li class="mb-2">Estructura: Hormigón armado</li>
+                                                    <li class="mb-2">Muros exteriores: Ladrillo visto</li>
+                                                    <li class="mb-2">Acabados interiores: Yeso y pintura</li>
+                                                    <li>Pisos: Porcelanato</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <h5 class="h6 text-warning mb-3">Planos Arquitectónicos</h5>
+                                           <img src="https://i.postimg.cc/KvVcCqz2/page-1.png"
+                         alt="Edificio moderno" 
+                         class="img-fluid rounded shadow border border-gold"
+                         loading="lazy">
+                </div>
+                                        <div class="mt-4">
+                                            <h5 class="h6 text-warning mb-2">Cronograma de Construcción</h5>
+                                            <div class="progress bg-dark bg-opacity-50 mb-2" style="height: 10px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" 
+                                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="row small">
+                                                <div class="col-4">
+                                                    <div class="d-flex align-items-center mb-1">
+                                                        <span class="bg-warning rounded-circle me-2" style="width: 10px; height: 10px;"></span>
+                                                        <span>Cimientos (100%)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="d-flex align-items-center mb-1">
+                                                        <span class="bg-warning rounded-circle me-2" style="width: 10px; height: 10px;"></span>
+                                                        <span>Estructura (60%)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="d-flex align-items-center mb-1">
+                                                        <span class="bg-secondary rounded-circle me-2" style="width: 10px; height: 10px;"></span>
+                                                        <span>Acabados (0%)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="small mt-2">Fecha estimada de entrega: Diciembre 2025>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-0.123456!3d39.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU5JzE1LjYiTiAwwrAwNyczMjAuMCJF!5e0!3m2!1sen!2ses!4v1234567890123!5m2!1sen!2ses" 
+                                                    allowfullscreen="" 
+                                                    loading="lazy" 
+                                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-warning w-100 mt-3 contact-btn">
+                                            <i class="fas fa-file-contract me-2"></i>Solicitar contrato
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Las otras pestañas (casas, apartamentos, comercial) tendrían contenido filtrado -->
+                <div class="tab-pane fade" id="casas" role="tabpanel">
+                    <!-- Contenido filtrado para casas -->
+                </div>
+                <div class="tab-pane fade" id="apartamentos" role="tabpanel">
+                    <!-- Contenido filtrado para apartamentos -->
+                </div>
+                <div class="tab-pane fade" id="comercial" role="tabpanel">
+                    <!-- Contenido filtrado para comercial -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" id="carousel-inner">
+                            <!-- Las imágenes se insertarán dinámicamente aquí -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- FOOTER -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 style="color: var(--color-secondary);" class="mb-4">ALFA & OMEGA</h3>
+                    <p class="text-white">Constructora e Inmobiliaria con más de 15 años de experiencia transformando espacios y creando hogares.</p>
+                    <div class="mt-4">
+  <a href="https://www.facebook.com/profile.php?id=61573019528525" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/constructora_alfa_y_omegaaaaaa?igsh=MTg3dzZ3ZXJobDN3bg==" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@carlosbarrera8709?_t=ZS-8z2GB9yMIT9&_r=1" target="_blank" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://m.youtube.com/@constructorainmobiliariaal3241?fbclid=PAQ0xDSwMSpphleHRuA2FlbQIxMAABp_mnq64xn08HzZLqqGhPsnpiiag-6k001sE2doofkW2lD4nJkFqaVvOJzEez_aem_huGolMac8kP9Uk6jHMIPuQ" target="_blank" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://wa.me/573115541520" target="_blank" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 style="color: var(--color-secondary);" class="mb-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="Inicio.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="Nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="Proyectos.html" class="text-white text-decoration-none">Proyectos</a></li>
+                        <li class="mb-2"><a href="Servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="Contactos.html" class="text-white text-decoration-none">Contactos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 style="color: var(--color-secondary);" class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled text-white">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--color-secondary);"></i> Bogotá, Colombia</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2" style="color: var(--color-secondary);"></i> +57 311 554 1520</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2" style="color: var(--color-secondary);"></i> comadrejaprim@gmail.com</li>
+                        <li><i class="fas fa-clock me-2" style="color: var(--color-secondary);"></i> Lunes-Domingo: 9am-7pm</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3" style="height: 120px; background: rgba(212, 175, 55, 0.1); border: 2px solid var(--color-secondary); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                            <div style="text-align: center;">
+                                <h2 style="color: var(--color-secondary); font-family: 'Playfair Display', serif; margin: 0; font-size: 2rem; font-weight: 700;">A & Ω</h2>
+                                <p style="color: #fff; margin: 0; font-size: 0.7rem; letter-spacing: 2px;">ALFA & OMEGA</p>
+                            </div>
+                        </div>
+                        <p class="text-white small">Constructora e Inmobiliaria</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border-color: var(--color-secondary); margin: 2rem 0;">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small" style="color: #aaa; margin: 0;">&copy; 2025 Alfa & Omega. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="small me-3 text-decoration-none" style="color: #aaa;">Política de privacidad</a>
+                    <a href="#" class="small text-decoration-none" style="color: #aaa;">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.padding = '0.5rem 0';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+        } else {
+            navbar.style.padding = '1rem 0';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Initialize carousel with auto-rotation
+    const myCarousel = document.querySelector('#projectsCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        wrap: true,
+        pause: 'hover'
+    });
+</script>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar todos los elementos expandibles como ocultos
+        document.querySelectorAll('.expandable-content').forEach(content => {
+            content.classList.add('d-none');
+        });
+
+        // Manejar clic en botones de expandir
+        document.querySelectorAll('.expand-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const content = document.getElementById(projectId + '-details');
+                const icon = this.querySelector('i');
+                
+                // Cerrar otros contenidos abiertos
+                document.querySelectorAll('.expandable-content').forEach(item => {
+                    if (item.id !== projectId + '-details') {
+                        item.classList.add('d-none');
+                        const otherBtn = document.querySelector('[data-project="' + item.id.replace('-details', '') + '"]');
+                        if (otherBtn) {
+                            otherBtn.innerHTML = 'Más info <i class="fas fa-chevron-right ms-1"></i>';
+                        }
+                    }
+                });
+                
+                // Alternar el contenido actual
+                content.classList.toggle('d-none');
+                
+                // Actualizar ícono del botón
+                if (content.classList.contains('d-none')) {
+                    this.innerHTML = 'Más info <i class="fas fa-chevron-right ms-1"></i>';
+                } else {
+                    this.innerHTML = 'Menos info <i class="fas fa-chevron-up ms-1"></i>';
+                    // Desplazar suavemente a la sección expandida
+                    content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        });
+
+        // Configurar galería modal
+        document.querySelectorAll('.project-card img').forEach(img => {
+            img.addEventListener('click', function(e) {
+                if (!e.target.closest('.expandable-content')) {
+                    const projectCard = this.closest('.project-card');
+                    const projectTitle = projectCard.querySelector('.card-body h3').textContent;
+                    const images = Array.from(projectCard.querySelectorAll('img')).map(img => ({
+                        src: img.src,
+                        alt: img.alt
+                    }));
+                    
+                    document.getElementById('modalTitle').textContent = projectTitle;
+                    const carouselInner = document.getElementById('carousel-inner');
+                    carouselInner.innerHTML = '';
+                    
+                    images.forEach((image, index) => {
+                        const item = document.createElement('div');
+                        item.className = 'carousel-item ' + (index === 0 ? 'active' : '');
+                        item.innerHTML = `
+                            <img src="${image.src}" class="d-block w-100" alt="${image.alt}" 
+                                 style="max-height: 70vh; object-fit: contain; margin: 0 auto;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="bg-dark bg-opacity-75 d-inline-block px-2 py-1 rounded">${image.alt}</p>
+                            </div>
+                        `;
+                        carouselInner.appendChild(item);
+                    });
+                    
+                    const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+                    modal.show();
+                }
+            });
+        });
+
+        // Manejar botones de contacto
+        document.querySelectorAll('.contact-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectCard = this.closest('.project-card-inner');
+                const projectTitle = projectCard.querySelector('.card-body h3').textContent;
+                alert('Formulario de contacto para: ' + projectTitle + '\nEsta función se conectaría a un sistema real.');
+            });
+        });
+
+        // Configurar pestañas para filtrar
+        const tabElms = document.querySelectorAll('button[data-bs-toggle="tab"]');
+        tabElms.forEach(tabEl => {
+            tabEl.addEventListener('shown.bs.tab', function(event) {
+                const target = event.target.getAttribute('data-bs-target');
+                if (target !== '#all') {
+                    const category = target.replace('#', '');
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        card.style.display = card.getAttribute('data-category') === category ? 'block' : 'none';
+                    });
+                } else {
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        card.style.display = 'block';
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
